@@ -179,16 +179,16 @@
 
     <script>
 
-function runFriendQuery() {
-    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-    $.ajax({ url: "/api/friends", method: "GET" })
-      .then(function(friendsData) {
+// function runFriendQuery() {
+//     // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+//     $.ajax({ url: "/api/friends", method: "GET" })
+//       .then(function(friendsData) {
 
-        console.log("friendsData is ");
-        console.log(friendsData);
+//         console.log("friendsData is ");
+//         console.log(friendsData);
 
-    });
-  }
+//     });
+//   }
 
 
 
@@ -202,11 +202,17 @@ function runFriendQuery() {
                 scoresArray.push(parseInt($("#question" + i).val()));
             }
 
+            console.log("scoresArray[0] type: ");
+            console.log(typeof(scoresArray[0]));
+
             var surveyAnswers = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
                 scores: scoresArray
             };
+
+            console.log("surveyAnswers.scores[0] type: ");
+            console.log(typeof(surveyAnswers.scores[0]));
 
 
             console.log("From inside survey.html, surveyAnswers is ");
