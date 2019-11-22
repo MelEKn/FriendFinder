@@ -154,12 +154,12 @@
         </button>
         ​
         <!-- Modal -->
-        <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="yourMatch"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Your Match!</h5>
+                        <div class="modal-title" id="yourMatch">Your Match!</div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -169,7 +169,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -222,7 +221,10 @@
 
                 console.log("Inside survey.html, inside the post, the callback (data) is ");
                 console.log(data);
+                $("#yourMatch").html("<h6>Your Match:</h6> <h3>" + data.name + "</h3> <img src='" + data.photo + "' class='img-fluid'  id='friend-photo' alt='A photo of " + data.name + "' />");
             });
+
+            
             
         });
     </script>

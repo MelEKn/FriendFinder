@@ -38,8 +38,8 @@ var friendsArray = [
     "name": "Sun Bak",
     "photo": "https://m.media-amazon.com/images/M/MV5BMjQ0NTYzMjQ0Nl5BMl5BanBnXkFtZTgwNzY1MDcxMjI@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
     "scores": [
-        3,
-        3,
+        5,
+        5,
         1,
         5,
         5,
@@ -73,13 +73,13 @@ var friendsArray = [
         1,
         1,
         2,
-        4,
+        2,
         5,
         2,
         4,
+        1,
         2,
-        2,
-        5
+        2
     ]
 },
 {
