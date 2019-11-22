@@ -65,8 +65,16 @@ app.post("/api/friends/", function (req, res){
         }
         console.log("totalDifference[" + i + "] is ");
         console.log(totalDifference[i]);
-
     }
+
+    console.log("totalDifference is ");
+    console.log(totalDifference);
+
+  
+
+    var minValue = totalDifference.indexOf(Math.min.apply(null,totalDifference));
+
+    console.log("minValue is " + minValue);
 
 
     
