@@ -175,32 +175,40 @@
         </div>
     </div>
 
-    <script>
-            $("#submitButton").on("click", function(event) {
-              event.preventDefault();
-              var bestmatch = "Kathryn";
-              console.log(bestmatch);
-              // $.post("/api/tables", newReservation, function(data) {
-              //   console.log
-              // })
-              $(".modal-body").text(bestmatch);
-              var mySelectVal = parseInt($("#mySelect").val());
-              console.log(typeof(mySelectVal));
-          });
-          </script>
-    <!--Linking the javascript-->
-    <script src="../routing/apiRoutes.js"></script>
+
     <script>
   $("#submitButton").on("click", function(event) {
     event.preventDefault();
-    var bestmatch = "Kathryn";
-    console.log(bestmatch);
+
+    
+    var scoresArray = [];
+
+    for(var i=1; i<11; i++){
+     scoresArray.push(parseInt($("#question" + i).val()));
+     }
+
+     var surveyAnswers = {
+         name: $("#name").val().trim(),
+         photo: $("#photo").val().trim(),
+         scores: scoresArray
+     };
+
+
+     
+
+
+    // var userName = $("#name").val().trim();
+    // console.log(userName);
+    // console.log("SurveyAnswers is: ");
+    console.log(surveyAnswers);
+    // var bestmatch = "Kathryn";
+    // console.log(bestmatch);
     // $.post("/api/tables", newReservation, function(data) {
     //   console.log
     // })
-    $(".modal-body").text(bestmatch);
-    var mySelectVal = parseInt($("#mySelect").val());
-    console.log(typeof(mySelectVal));
+    // $(".modal-body").text(bestmatch);
+    // var mySelectVal = parseInt($("#mySelect").val());
+    // console.log(typeof(mySelectVal));
 });
 </script>
 </body>
