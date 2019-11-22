@@ -76,6 +76,15 @@ app.post("/api/friends/", function (req, res){
 
     console.log("minValue is " + minValue);
 
+    var bestMatch = friendsData[minValue];
+
+    console.log("Best match: ");
+    console.log(bestMatch);
+
+    res.json(bestMatch);
+
+
+
 
     
 })

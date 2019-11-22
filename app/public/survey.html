@@ -218,7 +218,7 @@
             console.log("From inside survey.html, surveyAnswers is ");
             console.log(surveyAnswers);
 
-            $.post("/api/friends/", surveyAnswers, function (data) {
+            $.post("/api/friends", surveyAnswers, function (data) {
 
                 console.log("Inside survey.html, inside the post, the callback (data) is ");
                 console.log(data);
